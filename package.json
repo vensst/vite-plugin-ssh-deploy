@@ -1,0 +1,29 @@
+{
+  "name": "@vensst/vite-plugin-ssh-deploy",
+  "version": "1.0.0",
+  "description": "A Vite plugin for automated remote deployment with backup and rollback via SSH.",
+  "author": "vensst",
+  "license": "MIT",
+  "type": "module",
+  "main": "./index.js",
+  "module": "./index.js",
+  "types": "./index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./index.js",
+      "require": "./index.cjs"
+    }
+  },
+  "keywords": [
+    "vite",
+    "vite-plugin",
+    "deploy",
+    "ssh",
+    "upload",
+    "rollback",
+    "backup"
+  ],
+  "dependencies": {
+    "node-ssh": "^13.2.1"
+  }
+}
