@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "ES2019",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "outDir": "./dist",
+    "declaration": true,
+    "strict": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "types": ["node", "vite"],
+    "skipLibCheck": true
+  },
+  "include": ["src"],
+  "references": [
+    {
+      "compilerOptions": {
+        "module": "CommonJS",
+        "outDir": "./dist/cjs"
+      }
+    }
+  ]
+}

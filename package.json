@@ -1,29 +1,43 @@
 {
   "name": "@vensst/vite-plugin-ssh-deploy",
   "version": "1.0.0",
-  "description": "A Vite plugin for automated remote deployment with backup and rollback via SSH.",
-  "author": "vensst",
-  "license": "MIT",
-  "type": "module",
-  "main": "./index.js",
-  "module": "./index.js",
-  "types": "./index.d.ts",
+  "description": "A Vite plugin to deploy build output to a remote server via SSH with backup and rollback.",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
   "exports": {
     ".": {
-      "import": "./index.js",
-      "require": "./index.cjs"
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs.js"
     }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc && tsc --module commonjs --outDir dist/cjs && mv dist/cjs/index.js dist/index.cjs.js",
+    "dev": "tsc -w",
+    "pub": "npm run build && npm publish --access public"
   },
   "keywords": [
     "vite",
     "vite-plugin",
     "deploy",
     "ssh",
-    "upload",
-    "rollback",
-    "backup"
+    "deployment",
+    "backup",
+    "rollback"
   ],
+  "author": "vensst",
+  "license": "MIT",
   "dependencies": {
     "node-ssh": "^13.2.1"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.1",
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.3",
+    "vite": "^7.2.2"
   }
 }

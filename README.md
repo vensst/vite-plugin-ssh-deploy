@@ -42,16 +42,17 @@ export default {
 
 ## 🔧 Options
 
-| Field | Type | Required | Description |
-|-------|------|----------|-------------|
-| host | string | ✔ | SSH server host |
-| username | string | ✔ | SSH username |
-| password | string | ✖ | SSH password |
-| remotePath | string | ✔ | Target deploy directory |
-| localPath | string | ✖ | Default: `dist` |
-| backupKeep | number | ✖ | Keep last N backups |
-| buildCommand | string | ✖ | Optional build command |
-| isReloadNginx | boolean | ✖ | Reload nginx on deploy |
+| Field | Type | Required | Description                                      |
+|-------|------|---------|--------------------------------------------------|
+| host | string | ✔ | SSH server host                                  |
+| port | number | ✖ | SSH server port. Default: `22`                   |
+| username | string | ✔ | SSH username                                     |
+| password | string | ✔ | SSH password                                     |
+| remotePath | string | ✔ | Target deploy directory                          |
+| localPath | string | ✖ | Default: `dist`                                  |
+| backupKeep | number | ✖ | Keep last N backups                              |
+| buildCommand | string | ✖ | Optional build command. Default: `npm run build` |
+| isReloadNginx | boolean | ✖ | Reload nginx on deploy. Default: `false`         |
 
 ---
 
