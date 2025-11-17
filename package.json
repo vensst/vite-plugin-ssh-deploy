@@ -16,7 +16,8 @@
     "README.md"
   ],
   "scripts": {
-    "build": "tsc && tsc --module commonjs --outDir dist/cjs && mv dist/cjs/index.js dist/index.cjs.js",
+    "prebuild": "rimraf dist",
+    "build": "rimraf dist && tsc && tsc --module commonjs --outDir dist/cjs && mv dist/cjs/index.js dist/index.cjs.js && rimraf dist/cjs",
     "dev": "tsc -w",
     "pub": "npm run build && npm publish --access public"
   },
@@ -36,6 +37,7 @@
   },
   "devDependencies": {
     "@types/node": "^24.10.1",
+    "rimraf": "^6.1.0",
     "tsup": "^8.5.1",
     "typescript": "^5.9.3",
     "vite": "^7.2.2"

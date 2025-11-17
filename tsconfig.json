@@ -11,13 +11,5 @@
     "types": ["node", "vite"],
     "skipLibCheck": true
   },
-  "include": ["src"],
-  "references": [
-    {
-      "compilerOptions": {
-        "module": "CommonJS",
-        "outDir": "./dist/cjs"
-      }
-    }
-  ]
+  "include": ["src"]
 }
