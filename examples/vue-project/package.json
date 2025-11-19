@@ -1,0 +1,24 @@
+{
+  "name": "vue-project",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc -b && vite build",
+    "deploy": "node deploy.js",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@vensst/vite-plugin-ssh-deploy": "file:../../vensst-vite-plugin-ssh-deploy-1.0.0.tgz",
+    "vue": "^3.5.24"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.0",
+    "@vitejs/plugin-vue": "^6.0.1",
+    "@vue/tsconfig": "^0.8.1",
+    "typescript": "~5.9.3",
+    "vite": "^7.2.2",
+    "vue-tsc": "^3.1.3"
+  }
+}
