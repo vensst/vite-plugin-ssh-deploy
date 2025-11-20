@@ -50,7 +50,10 @@ export default defineConfig({
 
 ```js
 // deploy.js
+//  package.json has "type": "module"
 import {deploy} from '@vensst/vite-plugin-ssh-deploy'
+// package.json without "type": "module"
+// const {deploy} = require('@vensst/vite-plugin-ssh-deploy')
 
 deploy({
   host: '主机地址',

@@ -10,7 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@vensst/vite-plugin-ssh-deploy": "file:../../vensst-vite-plugin-ssh-deploy-1.0.0.tgz",
+    "@vensst/vite-plugin-ssh-deploy": "file:../../vensst-vite-plugin-ssh-deploy-1.0.1.tgz",
     "vue": "^3.5.24"
   },
   "devDependencies": {
